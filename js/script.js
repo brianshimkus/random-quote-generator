@@ -29,10 +29,8 @@ var quotes = [
     }
 ];
 
-function printQuote () {
-    console.log("hello");
+var randomNumber = Math.floor((Math.random() * 3) + 1);
+
+function printQuote() {
+    console.log(quotes[0]);
 }
-
-var randomNumber = Math.floor((Math.random() * 3) + 0);
-
-console.log(randomNumber);
