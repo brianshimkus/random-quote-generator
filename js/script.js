@@ -32,5 +32,5 @@ var quotes = [
 var randomNumber = Math.floor((Math.random() * 3) + 1);
 
 function printQuote() {
-    console.log(quotes[0]);
+    console.log(quotes[randomNumber]);
 }
