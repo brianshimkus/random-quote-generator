@@ -31,10 +31,11 @@ var quotes = [
 
 var quote = '';
 
-quotes.toString();
-var randomNumber = Math.floor((Math.random() * 4) + 0);
+function getRandomQuote(quotes) {
+    var randomNumber = Math.floor((Math.random() * 4) + 0);
+    randomNumber = quotes[randomNumber];
+    return randomNumber;
+};
 
 function printQuote() {
-}
-
-console.log(quotes[randomNumber]);
+};
