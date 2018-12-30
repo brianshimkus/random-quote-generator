@@ -29,8 +29,12 @@ var quotes = [
     }
 ];
 
-var randomNumber = Math.floor((Math.random() * 3) + 1);
+var quote = '';
+
+quotes.toString();
+var randomNumber = Math.floor((Math.random() * 4) + 0);
 
 function printQuote() {
-    console.log(quotes[randomNumber]);
 }
+
+console.log(quotes[randomNumber]);
