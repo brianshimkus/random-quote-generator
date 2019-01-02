@@ -26,16 +26,21 @@ var quotes = [
         source: "Source 4",
         citation: "Citation 4",
         year: "2015"
+    },
+    {
+        quote:"Inspirational quote 5",
+        source: "Source 5",
+        citation: "Citation 5",
+        year: "2014"
     }
 ];
 
-var quote = '';
-
 function getRandomQuote(quotes) {
-    var randomNumber = Math.floor((Math.random() * 4) + 0);
-    randomNumber = quotes[randomNumber];
-    return randomNumber;
+    var random = quotes[Math.floor(quotes.length * Math.random())];
+    return random;
 };
+
+console.log(getRandomQuote(quotes));
 
 function printQuote() {
 };
