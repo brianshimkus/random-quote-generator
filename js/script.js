@@ -2,12 +2,14 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+// DOM elements
 const quote = document.querySelector('.quote'),
     source = document.querySelector('.source'),
     citation = document.querySelector('.citation'),
     year = document.querySelector('.year'),
     button = document.getElementById('loadQuote');
 
+// Collection of quotes
 var quotes = [
     {
         quote:"Inspirational quote 1",
@@ -41,6 +43,7 @@ var quotes = [
     }
 ];
 
+// Gets random quote and inserts it onto page
 function getRandomQuote(quotes) {
     var random = quotes[Math.floor(quotes.length * Math.random())];
     quote.innerHTML = random.quote;
@@ -50,12 +53,14 @@ function getRandomQuote(quotes) {
     return random;
 };
 
+// Get random color to change the background of the body and button
 function randomBackgroundColor() {
     var randomColor = '#'+Math.random().toString(16).substr(-6);
     document.body.style.backgroundColor = randomColor;
     button.style.backgroundColor = randomColor;
 }
 
+// Quote and colors change on click
 function printQuote() {
     getRandomQuote(quotes);
     randomBackgroundColor();
