@@ -59,14 +59,13 @@ function randomBackgroundColor() {
 
 // Quote and colors change on click
 function printQuote() {
-    const i = getRandomQuote();
+    const quote = getRandomQuote();
     const quoteHTML = `
-    <p class="quote">${i.quote}</p>
-    <p class="source">${i.source}
-    <span class="citation">${i.citation}</span>
-    <span class="year">${i.year}</span>
-    </p>
-    `;
+    <p class="quote">${quote.quote}</p>
+    <p class="source">${quote.source}
+    ${quote.citation ? `<span class="citation">${quote.citation}</span>` : ""}
+    ${quote.year ? `<span class="year">${quote.year}</span>` : ""}
+    </p>`;
     quoteBox.innerHTML = quoteHTML;
     randomBackgroundColor();
 };
