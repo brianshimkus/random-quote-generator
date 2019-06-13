@@ -7,7 +7,8 @@ const quote = document.querySelector('.quote'),
     source = document.querySelector('.source'),
     citation = document.querySelector('.citation'),
     year = document.querySelector('.year'),
-    button = document.getElementById('loadQuote');
+    button = document.getElementById('loadQuote'),
+    quoteBox = document.getElementById('quote-box');
 
 // Collection of quotes
 var quotes = [
@@ -44,12 +45,8 @@ var quotes = [
 ];
 
 // Gets random quote and inserts it onto page
-function getRandomQuote(quotes) {
+function getRandomQuote() {
     var random = quotes[Math.floor(quotes.length * Math.random())];
-    quote.innerHTML = random.quote;
-    source.innerHTML = random.source;
-    citation.innerHTML = random.citation;
-    year.innerHTML = random.year;
     return random;
 };
 
@@ -62,6 +59,14 @@ function randomBackgroundColor() {
 
 // Quote and colors change on click
 function printQuote() {
-    getRandomQuote(quotes);
+    const i = getRandomQuote();
+    const quoteHTML = `
+    <p class="quote">${i.quote}</p>
+    <p class="source">${i.source}
+    <span class="citation">${i.citation}</span>
+    <span class="year">${i.year}</span>
+    </p>
+    `;
+    quoteBox.innerHTML = quoteHTML;
     randomBackgroundColor();
 };
