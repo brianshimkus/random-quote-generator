@@ -69,3 +69,8 @@ function printQuote() {
     quoteBox.innerHTML = quoteHTML;
     randomBackgroundColor();
 };
+
+// Quote automatically changes every 8 seconds
+setInterval(function () {
+    printQuote()
+}, 8000);
