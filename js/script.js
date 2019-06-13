@@ -38,9 +38,19 @@ var quotes = [
     }
 ];
 
-// Gets random quote and inserts it onto page
+// Choose quote at random
+var currentNumber = 0;
+
 function getRandomQuote() {
     var random = quotes[Math.floor(quotes.length * Math.random())];
+    
+    // Prevent same quote from appearing consecutively
+    if(random === currentNumber) {
+        random;
+    }
+    else {
+        currentNumber = random;
+    }
     return random;
 };
 
@@ -65,6 +75,6 @@ function printQuote() {
 };
 
 // Quote automatically changes every 8 seconds
-setInterval(function () {
+setInterval(function() { 
     printQuote()
 }, 8000);
