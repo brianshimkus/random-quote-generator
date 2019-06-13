@@ -13,34 +13,28 @@ const quote = document.querySelector('.quote'),
 // Collection of quotes
 var quotes = [
     {
-        quote:"Inspirational quote 1",
-        source: "Source 1",
-        citation: "Citation 1",
-        year: "2018"
+        quote:"I walk away like a movie star, Who gets burned in a three way script, Enter number two, a movie queen",
+        source: "Gordon Lightfoot",
+        citation: "If You Could Read My Mind",
+        year: "1970"
     },
     {
-        quote:"Inspirational quote 2",
-        source: "Source 2",
-        citation: "Citation 2",
-        year: "2017"
+        quote:"The best way to find out if you can trust somebody is to trust them.",
+        source: "Ernest Hemingway",
     },
     {
-        quote:"Inspirational quote 3",
-        source: "Source 3",
-        citation: "Citation 3",
-        year: "2016"
+        quote:"And if California slides into the ocean, I predict this motel will be standing until I pay my bill",
+        source: "Warren Zevon",
+        citation: "Desperados Under the Eaves",
+        year: "1976"
     },
     {
-        quote:"Inspirational quote 4",
-        source: "Source 4",
-        citation: "Citation 4",
-        year: "2015"
+        quote:"Build your own dreams, or someone else will hire you to build theirs.",
+        source: "Farrah Gray"
     },
     {
-        quote:"Inspirational quote 5",
-        source: "Source 5",
-        citation: "Citation 5",
-        year: "2014"
+        quote:"You can’t use up creativity. The more you use, the more you have.",
+        source: "Maya Angelou"
     }
 ];
 
