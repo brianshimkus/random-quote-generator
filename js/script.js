@@ -5,7 +5,8 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 const quote = document.querySelector('.quote'),
     source = document.querySelector('.source'),
     citation = document.querySelector('.citation'),
-    year = document.querySelector('.year');
+    year = document.querySelector('.year'),
+    button = document.getElementById('loadQuote');
 
 var quotes = [
     {
@@ -49,6 +50,13 @@ function getRandomQuote(quotes) {
     return random;
 };
 
+function randomBackgroundColor() {
+    var randomColor = '#'+Math.random().toString(16).substr(-6);
+    document.body.style.backgroundColor = randomColor;
+    button.style.backgroundColor = randomColor;
+}
+
 function printQuote() {
     getRandomQuote(quotes);
+    randomBackgroundColor();
 };
