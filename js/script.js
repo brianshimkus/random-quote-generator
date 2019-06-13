@@ -2,6 +2,11 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+const quote = document.querySelector('.quote'),
+    source = document.querySelector('.source'),
+    citation = document.querySelector('.citation'),
+    year = document.querySelector('.year');
+
 var quotes = [
     {
         quote:"Inspirational quote 1",
@@ -37,11 +42,13 @@ var quotes = [
 
 function getRandomQuote(quotes) {
     var random = quotes[Math.floor(quotes.length * Math.random())];
-    console.log(random);
+    quote.innerHTML = random.quote;
+    source.innerHTML = random.source;
+    citation.innerHTML = random.citation;
+    year.innerHTML = random.year;
     return random;
 };
 
-getRandomQuote(quotes);
-
 function printQuote() {
+    getRandomQuote(quotes);
 };
