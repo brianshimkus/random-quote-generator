@@ -16,25 +16,30 @@ var quotes = [
         quote:"I walk away like a movie star, Who gets burned in a three way script, Enter number two, a movie queen",
         source: "Gordon Lightfoot",
         citation: "If You Could Read My Mind",
-        year: "1970"
+        year: "1970",
+        color: "ff2b2b"
     },
     {
         quote:"The best way to find out if you can trust somebody is to trust them.",
         source: "Ernest Hemingway",
+        color: "9b5b17"
     },
     {
         quote:"And if California slides into the ocean, I predict this motel will be standing until I pay my bill",
         source: "Warren Zevon",
         citation: "Desperados Under the Eaves",
-        year: "1976"
+        year: "1976",
+        color: "2bb8ff"
     },
     {
         quote:"Build your own dreams, or someone else will hire you to build theirs.",
-        source: "Farrah Gray"
+        source: "Farrah Gray",
+        color: "b12bff"
     },
     {
         quote:"You can’t use up creativity. The more you use, the more you have.",
-        source: "Maya Angelou"
+        source: "Maya Angelou",
+        color: "ff952b"
     }
 ];
 
@@ -51,15 +56,16 @@ function getRandomQuote() {
     else {
         currentNumber = random;
     }
-    return random;
-};
 
-// Get random color to change the background of the body and button
-function randomBackgroundColor() {
-    var randomColor = '#'+Math.random().toString(16).substr(-6);
-    document.body.style.backgroundColor = randomColor;
-    button.style.backgroundColor = randomColor;
-}
+    // Change background color based on assigned color of quote
+    var color = '#'+random.color;
+    document.body.style.backgroundColor = color;
+    button.style.backgroundColor = color;
+
+    // Return random
+    return random;
+
+};
 
 // Quote and colors change on click
 function printQuote() {
@@ -71,7 +77,6 @@ function printQuote() {
     ${quote.year ? `<span class="year">${quote.year}</span>` : ""}
     </p>`;
     quoteBox.innerHTML = quoteHTML;
-    randomBackgroundColor();
 };
 
 // Quote automatically changes every 8 seconds
