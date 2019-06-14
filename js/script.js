@@ -17,7 +17,7 @@ var quotes = [
         source: "Gordon Lightfoot",
         citation: "If You Could Read My Mind",
         year: "1970",
-        color: "ff2b2b"
+        color: "36b55c"
     },
     {
         quote:"The best way to find out if you can trust somebody is to trust them.",
@@ -67,8 +67,16 @@ function getRandomQuote() {
 
 };
 
+// Quote automatically changes every 6 seconds
+var timer = setInterval(printQuote);
+
 // Quote and colors change on click
 function printQuote() {
+    
+    // Reset quote change timer on click
+    clearInterval(timer);
+    timer = setInterval(printQuote, 6000);
+    
     const quote = getRandomQuote();
     const quoteHTML = `
     <p class="quote">${quote.quote}</p>
@@ -78,8 +86,3 @@ function printQuote() {
     </p>`;
     quoteBox.innerHTML = quoteHTML;
 };
-
-// Quote automatically changes every 8 seconds
-setInterval(function() { 
-    printQuote()
-}, 8000);
